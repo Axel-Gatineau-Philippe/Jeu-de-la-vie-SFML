@@ -18,3 +18,5 @@ void Case::setPosition(const int& x, const int& y) {
 sf::RectangleShape & Case::getRectangle() {
 	return *_rectangle;
 }
+
+Case::~Case() {}

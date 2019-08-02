@@ -1,11 +1,11 @@
 #include "Grille.h"
 
-Grille::Grille(const unsigned& tailleMatrice, const int& tailleCase) : _tailleMatrice(tailleMatrice), _tailleCase(tailleCase) {
+Grille::Grille(const unsigned& tailleMatrice, const unsigned &tailleCase) : _tailleMatrice(tailleMatrice), _tailleCase(tailleCase) {
 	_matrice.resize(tailleMatrice);
 }
 
 void Grille::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-	for (	unsigned i = 0; i < _tailleMatrice; ++i) {
+	for (unsigned i = 0; i < _tailleMatrice; ++i) {
 		for (unsigned j = 0; j < _tailleMatrice; ++j) {
 			target.draw(_matrice[i][j], states);
 		}
@@ -23,3 +23,5 @@ void Grille::initGrille() {
 		}
 	}
 }
+
+Grille::~Grille() { }

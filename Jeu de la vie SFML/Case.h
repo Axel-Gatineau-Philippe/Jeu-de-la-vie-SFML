@@ -19,4 +19,8 @@ public:
 	void setPosition(const int& x, const int& y);
 
 	sf::RectangleShape& getRectangle();
+
+	~Case();
 };
+
+
